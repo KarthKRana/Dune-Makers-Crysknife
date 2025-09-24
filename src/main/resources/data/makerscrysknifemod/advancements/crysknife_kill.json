@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": { "item": "makerscrysknifemod:crysknife" },
+    "title": "Bless the Maker and His water",
+    "description": "Kill an enemy with a Crysknife",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "recipes": [
+      "makerscrysknifemod:fedaykin_crysknife"
+    ]
+  },
+  "criteria": {
+    "kill_with_crysknife": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:player",
+            "nbt": "{SelectedItem:{id:\"makerscrysknifemod:crysknife\"}}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["kill_with_crysknife"]
+  ]
+}

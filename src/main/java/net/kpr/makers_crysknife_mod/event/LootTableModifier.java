@@ -27,7 +27,7 @@ public class LootTableModifier {
                     .add(LootItem.lootTableItem(ModItems.CRYSKNIFE.get())
                             .when(LootItemRandomChanceCondition
                                     .randomChance(1.0F / 32.0F)))
-                    // 1/32 chance of a Crysknife appearing in a desert temple chest
+                    // 1/32 or 3.125% chance of a Crysknife spawning in a desert temple chest
                     .build();
             event.getTable().addPool(pool);
         }

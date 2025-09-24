@@ -11,9 +11,23 @@ import net.minecraftforge.common.TierSortingRegistry;
 import java.util.List;
 
 public class ModToolTiers {
+
+    /**
+     * <p>Durability: 1070</p>
+     */
     public static final Tier CRYSKNIFE = TierSortingRegistry.registerTier(
-            new ForgeTier(3, 1670, 5f, 4f, 16,
-                    ModTags.BLocks.INCORRECT_FOR_CRYSKNIFE, () -> Ingredient.EMPTY),
+            new ForgeTier(3, 1070, 4.5f, 2.5f, 16,
+                    ModTags.Blocks.INCORRECT_FOR_CRYSKNIFE, () -> Ingredient.EMPTY),
             ResourceLocation.fromNamespaceAndPath(MakersCrysknifeMod.MOD_ID, "crysknife"),
             List.of(Tiers.DIAMOND), List.of());
+
+    /**
+     * <p>Durability: 1670</p>
+     */
+    public static final Tier FEDAYKIN_CRYSKNIFE = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1670, 5f, 3.75f, 17,
+                    ModTags.Blocks.INCORRECT_FOR_CRYSKNIFE, () -> Ingredient.EMPTY),
+            ResourceLocation.fromNamespaceAndPath(MakersCrysknifeMod.MOD_ID, "fedaykin_crysknife"),
+            List.of(Tiers.NETHERITE), List.of());
+
 }

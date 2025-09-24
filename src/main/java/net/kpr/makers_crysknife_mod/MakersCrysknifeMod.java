@@ -14,31 +14,29 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 @Mod(MakersCrysknifeMod.MOD_ID)
 public class MakersCrysknifeMod {
+
     public static final String MOD_ID = "makerscrysknifemod";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
-    public MakersCrysknifeMod(FMLJavaModLoadingContext context) {
+    public MakersCrysknifeMod(@NotNull FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-
         ModCreativeModTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.CRYSKNIFE);
+            event.accept(ModItems.FEDAYKIN_CRYSKNIFE);
         }
     }
 

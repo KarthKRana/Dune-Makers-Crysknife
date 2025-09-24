@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
-    public static class BLocks {
+    public static class Blocks {
         public static final TagKey<Block> INCORRECT_FOR_CRYSKNIFE =
                 TagKey.create(Registries.BLOCK,
                         ResourceLocation.fromNamespaceAndPath(MakersCrysknifeMod.MOD_ID,
