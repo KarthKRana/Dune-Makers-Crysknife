@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": { "item": "makerscrysknifemod:spice_drum_sand" },
+    "title": "The Spice must flow",
+    "description": "Obtain Spice Drum Sand",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "recipes": [
+      "makerscrysknifemod:make_spice_refinery"
+    ]
+  },
+  "criteria": {
+    "obtain_spice_drum_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "item": "makerscrysknifemod:spice_drum_sand" }
+        ]
+      }
+    }
+  }
+}

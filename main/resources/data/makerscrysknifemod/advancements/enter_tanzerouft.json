@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "makerscrysknifemod:drum_sand"
+    },
+    "title": "Tanzerouft, The Land of Terror",
+    "description": "Set foot in the Tanzerouft",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_tanzerouft": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "makerscrysknifemod:tanzerouft"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enter_tanzerouft"
+    ]
+  ]
+}
+
