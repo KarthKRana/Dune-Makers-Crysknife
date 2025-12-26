@@ -1,0 +1,30 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "NIN",
+  "SCS",
+  "IKI"
+ ],
+ "key": {
+  "N": {
+   "item": "minecraft:iron_nugget"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "S": {
+   "item": "minecraft:netherite_scrap"
+  },
+  "C": {
+   "item": "makerscrysknifemod:crysknife"
+  },
+  "K": {
+   "item": "minecraft:dried_kelp"
+  }
+ },
+ "result": {
+  "item": "makerscrysknifemod:fedaykin_crysknife",
+  "count": 1
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "makerscrysknifemod:crysknife_kill",
+  "display": {
+    "icon": { "item": "makerscrysknifemod:fedaykin_crysknife" },
+    "title": "May thy knife chip and shatter",
+    "description": "Kill an enemy with a Fedaykin Crysknife",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "recipes": []
+  },
+  "criteria": {
+    "kill_with_fedaykin_crysknife": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:player",
+            "nbt": "{SelectedItem:{id:\"makerscrysknifemod:fedaykin_crysknife\"}}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["kill_with_fedaykin_crysknife"]
+  ]
+}
