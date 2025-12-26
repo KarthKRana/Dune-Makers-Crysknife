@@ -1,0 +1,29 @@
+{
+  "parent": "makerscrysknifemod:harvest_spice_drum_sand",
+  "display": {
+    "icon": { "item": "makerscrysknifemod:melange" },
+    "title": "620,000 Solaris?",
+    "description": "Refine Spice Drum Sand into Melange",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "recipes": [
+      "makerscrysknifemod:make_spice_rabbit_stew"
+    ]
+  },
+  "criteria": {
+    "obtain_melange": {
+      "trigger": "makerscrysknifemod:obtain_melange",
+      "conditions": {
+        "items": [
+          {
+            "item": "makerscrysknifemod:melange"
+          }
+        ]
+      }
+    }
+  }
+}
