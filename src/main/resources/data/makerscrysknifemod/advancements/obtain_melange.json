@@ -16,11 +16,13 @@
   },
   "criteria": {
     "obtain_melange": {
-      "trigger": "makerscrysknifemod:obtain_melange",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "makerscrysknifemod:melange"
+            "items": [
+              "makerscrysknifemod:melange"
+            ]
           }
         ]
       }

@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "sandworm_mod"
+    }
+  ],
+  "rewards": {
+    "recipes": [
+      "makerscrysknifemod:make_crysknife"
+    ]
+  },
+  "criteria": {
+    "has_sandworm_tooth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sandworm_mod:sandworm_tooth"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "makerscrysknifemod:make_crysknife"
+      }
+    }
+  },
+  "requirements": [
+    ["has_sandworm_tooth", "has_the_recipe"]
+  ]
+}

@@ -15,7 +15,6 @@ public class ModDataGenerators {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
         var lookupProvider = event.getLookupProvider();
-        // 👇 Hook in your loot table provider
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(output));
         
         generator.addProvider(event.includeServer(), new ModWorldGenProvider(output, lookupProvider));

@@ -7,5 +7,6 @@
   "block.makerscrysknifemod.spice_drum_sand": "Spice Drum Sand",
   "item.makerscrysknifemod.spice_fabric": "Spice Fabric",
   "block.makerscrysknifemod.spice_refinery": "Spice Refinery",
-  "item.makerscrysknifemod.spice_rabbit_stew": "Spice Rabbit Stew"
+  "item.makerscrysknifemod.spice_rabbit_stew": "Spice Rabbit Stew",
+  "tooltip.makers_crysknife_mod.spice_refinery.tooltip": "A critical piece of machinery for refining melange"
 }

@@ -122,6 +122,14 @@ repositories {
         url = "https://maven.minecraftforge.net/"
     }
 
+    maven {
+        name = "CurseMaven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
     flatDir {
@@ -138,6 +146,14 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     //TERRABLENDER
     implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${minecraft_version}-${terrablender_version}")
+
+    // Desert Behemoths: Sandworms! — fg.deobf remaps mixin/refmap names so these
+    // mods work in the userdev client. Do not drop production jars into run/mods.
+    runtimeOnly fg.deobf("blank:sandworm_mod:1.1.1")
+    runtimeOnly fg.deobf("blank:geckolib-forge-1.20.1:4.8.4")
+    runtimeOnly fg.deobf("blank:lodestone-1.20.1:1.6.4.1")
+    runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+    runtimeOnly fg.deobf("curse.maven:aaa-particles-979809:6035904")
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")

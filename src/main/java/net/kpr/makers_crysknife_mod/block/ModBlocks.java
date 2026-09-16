@@ -6,6 +6,7 @@ import net.kpr.makers_crysknife_mod.block.custom.DrumSandBlock;
 import net.kpr.makers_crysknife_mod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -41,10 +42,14 @@ public class ModBlocks {
 
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        if (name.equals("spice_refinery")) {
+            return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties().rarity(Rarity.UNCOMMON)));
+        }
         return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
 }

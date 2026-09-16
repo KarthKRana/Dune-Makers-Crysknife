@@ -6,6 +6,9 @@ bin
 .classpath
 .project
 
+# vscode
+.vscode
+
 # idea
 out
 *.ipr
@@ -17,9 +20,27 @@ out
 build
 .gradle
 
-# other
+# Forge userdev worlds, logs, and crash reports
 eclipse
 run
+run-data
+runs
+logs
+crash-reports
+
+# Built / downloaded jars (publish these on CurseForge/Modrinth, not Git)
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Other mods used only for local compatibility testing
+libs/*.jar
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
 
 # Files from Forge MDK
 forge*changelog.txt
+changelog.txt

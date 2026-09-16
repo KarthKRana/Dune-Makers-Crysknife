@@ -74,6 +74,7 @@ public class SpiceRefineryBlockEntity extends BlockEntity implements MenuProvide
         return super.getCapability(cap, side);
     }
 
+    //drop all items inside the refinery when it is broken
     public static void dropInventoryContents(Level level, BlockPos pos, BlockEntity blockEntity) {
         blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             for (int i = 0; i < handler.getSlots(); i++) {
@@ -91,16 +92,10 @@ public class SpiceRefineryBlockEntity extends BlockEntity implements MenuProvide
     }
 
     @Override
-    public void onLoad() {
-        super.onLoad();
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
-    }
+    public void onLoad() { super.onLoad(); lazyItemHandler = LazyOptional.of(() -> itemHandler); }
 
     @Override
-    public void invalidateCaps() {
-        super.invalidateCaps();
-        lazyItemHandler.invalidate();
-    }
+    public void invalidateCaps() { super.invalidateCaps(); lazyItemHandler.invalidate(); }
 
     @Override
     public Component getDisplayName() {

@@ -19,7 +19,6 @@ public class LootTableModifier {
             ResourceLocation.fromNamespaceAndPath("minecraft",
                     "chests/desert_pyramid");
 
-
     @SubscribeEvent
     public static void onLootTableModify(LootTableLoadEvent event) {
         if (event.getName().equals(DESERT_PYRAMID)) {

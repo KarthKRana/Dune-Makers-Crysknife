@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "sandworm_mod"
+    }
+  ],
+  "pattern": [
+    "   ",
+    " T ",
+    "S  "
+  ],
+  "key": {
+    "T": {
+      "item": "sandworm_mod:sandworm_tooth"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "makerscrysknifemod:crysknife",
+    "count": 1
+  }
+}

@@ -32,9 +32,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.MELANGE)
                     .craftRemainder(ModItems.CAPSULE.get()).rarity(Rarity.RARE)));
 
-    // **** Add around Christmas ****
-    public static final RegistryObject<Item> SPICE_FABRIC = ITEMS.register("spice_fabric",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+    // **** Add around...Christmas ****
+    //public static final RegistryObject<Item> SPICE_FABRIC = ITEMS.register("spice_fabric",
+    //        () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> SPICE_RABBIT_STEW = ITEMS.register("spice_rabbit_stew",
             () -> new SpiceRabbitStewItem(new Item.Properties().stacksTo(1).food(ModFoods.SPICE_RABBIT_STEW)));

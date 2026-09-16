@@ -3,10 +3,13 @@ package net.kpr.makers_crysknife_mod.block.custom;
 import net.kpr.makers_crysknife_mod.block.entity.ModBlockEntities;
 import net.kpr.makers_crysknife_mod.block.entity.SpiceRefineryBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -17,10 +20,10 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class SpiceRefineryBlock extends BaseEntityBlock {
 
@@ -37,16 +40,10 @@ public class SpiceRefineryBlock extends BaseEntityBlock {
         super.playerWillDestroy(level, pos, state, player);
     }
 
-
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
-
     public SpiceRefineryBlock(Properties pProperties) {
         super(pProperties);
         System.out.println("SpiceRefineryBlock constructor called - Block registered!");
     }
-
-    @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) { return SHAPE; }
 
     @Override
     public RenderShape getRenderShape(BlockState pState) { return RenderShape.MODEL; }
@@ -64,6 +61,13 @@ public class SpiceRefineryBlock extends BaseEntityBlock {
                 }
             }
             return InteractionResult.sidedSuccess(pLevel.isClientSide());
+    }
+
+    //Custom tooltip
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+        pTooltip.add(Component.translatable("tooltip.makers_crysknife_mod.spice_refinery.tooltip"));
+        super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 
     @Override

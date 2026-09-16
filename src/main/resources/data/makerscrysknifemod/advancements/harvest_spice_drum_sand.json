@@ -1,8 +1,8 @@
 {
-  "parent": "minecraft:adventure/root",
+  "parent": "makerscrysknifemod:enter_tanzerouft",
   "display": {
     "icon": { "item": "makerscrysknifemod:spice_drum_sand" },
-    "title": "The Spice must flow",
+    "title": "The Spice must Flow",
     "description": "Obtain Spice Drum Sand",
     "frame": "task",
     "show_toast": true,
@@ -19,7 +19,11 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "makerscrysknifemod:spice_drum_sand" }
+          {
+            "items": [
+              "makerscrysknifemod:spice_drum_sand"
+            ]
+          }
         ]
       }
     }
